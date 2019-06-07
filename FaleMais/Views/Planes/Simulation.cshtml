@@ -1,0 +1,37 @@
+﻿@model FaleMais.Models.ViewModel.PlaneFormViewModels
+
+@{
+    ViewData["Title"] = "Simulação de Plano";
+}
+
+<br />
+<h2>@ViewData["Title"]</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <h4>Selecione</h4>
+        <form asp-action="Simulator">
+            <div></div>
+            <div class="form-group">
+                <label class="control-label" asp-for="@Model.Plane.Origin"></label>
+                <select asp-for="@Model.Plane.Origin" asp-items="@new SelectList(Model.Origens)" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label class="control-label" asp-for="@Model.Plane.Destiny"></label>
+                <select asp-for="@Model.Plane.Destiny" asp-items="@new SelectList(Model.Destinys)" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label class="control-label" asp-for="@Model.Plane.Time"></label>
+                <input class="form-control" asp-for="@Model.Plane.Time" />
+            </div>
+            <div class="form-group">
+                <label class="control-label" asp-for="@Model.Plane.SpeakMorePlane"></label>
+                <select asp-for="@Model.Plane.SpeakMorePlane" asp-items="@new SelectList(Model.Planes)" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-default" value="Simular" />
+            </div>
+        </form>
+        <a asp-action="Index">Voltar</a>
+    </div>
+</div>

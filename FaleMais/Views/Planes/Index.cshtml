@@ -1,0 +1,42 @@
+﻿@model IEnumerable<FaleMais.Models.Plane>
+
+@{
+    ViewData["Title"] = "Serviços";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<hr />
+<h4>Preços por ligação</h4>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr class="success">
+            <th>
+                @Html.DisplayNameFor(model => model.Origin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Destiny)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PricePerMinute)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Origin)
+            </td>
+            <td>
+                 @Html.DisplayFor(modelItem => item.Destiny)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PricePerMinute)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+Faça a Simulação de uma ligação com um de nossos planos <a asp-action="Simulation">Aqui</a>

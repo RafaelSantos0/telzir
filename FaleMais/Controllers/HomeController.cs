@@ -17,15 +17,13 @@ namespace FaleMais.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Somos uma empresa especializada em chamadas de longa distância nacional, temos preocupação em trazer transparência de nossos serviços junto a nossos clientes.";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 

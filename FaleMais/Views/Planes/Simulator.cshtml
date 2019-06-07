@@ -1,0 +1,58 @@
+﻿@model FaleMais.Models.Plane
+
+@{
+    ViewData["Title"] = "Simulação";
+}
+
+<br />
+<h2>@ViewData["Title"]</h2>
+<hr />
+
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr class="success">
+            <th>
+                @Html.DisplayNameFor(model => model.Origin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Destiny)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpeakMorePlane)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaneCallValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CallValue)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Origin)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Destiny)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Time)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.SpeakMorePlane)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PlaneCallValue)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.CallValue)
+            </td>
+        </tr>
+    </tbody>
+</table>
+<a asp-action="Simulation">Voltar</a>
